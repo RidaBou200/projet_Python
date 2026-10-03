@@ -73,7 +73,7 @@ elif mdp.isdigit():
 else:
     print("inscrption terminé")
 '''
-
+'''
 for i in [0,1,2,4,5]:
     print(i)
 
@@ -91,4 +91,14 @@ import time
 while True :
     print(" Sauvgarde en cours ....")
     time.sleep(0.5)
-
+'''
+liste = [ "1" , "4" , "Paul" ,"3"]
+for element in liste:
+    if element.isdigit():
+        continue# contiue la boucle si il trouve un nombre et affiche finalament la chain de caratère 
+    print(element)
+liste = [ "1" , "4" , "Paul" ,"3"]
+for element in liste:
+    if element.isdigit():
+        break #arreter la boucle et n'affche rien si il trouve un nombre 
+    print(element)
