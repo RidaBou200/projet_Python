@@ -73,22 +73,3 @@ elif mdp.isdigit():
 else:
     print("inscrption terminé")
 '''
-
-for i in [0,1,2,4,5]:
-    print(i)
-
-for i in range(10):
-    print("Bonjour")
-
-
-continuer = "o"
-while continuer == "o":
-    print("On continue ...")
-    continuer = input("Vous voulez contiuez ? o/n")    
-
-
-import time
-while True :
-    print(" Sauvgarde en cours ....")
-    time.sleep(0.5)
-
