@@ -92,6 +92,9 @@ while True :
     print(" Sauvgarde en cours ....")
     time.sleep(0.5)
 '''
+
+'''
+
 liste = [ "1" , "4" , "Paul" ,"3"]
 for element in liste:
     if element.isdigit():
@@ -102,3 +105,20 @@ for element in liste:
     if element.isdigit():
         break #arreter la boucle et n'affche rien si il trouve un nombre 
     print(element)
+'''
+'''
+liste = [-5,-4,-3,-2,-1,0,1,2,3,4,5]
+nombres_positives = []
+for i in liste:
+    if i > 0:
+        nombres_positives.append(i)
+print(nombres_positives)
+'''
+nombres = range(10)
+nombres_inverses = []
+for i in nombres:
+    if i % 2 == 0 :
+        nombres_inverses.append(i)
+    else:
+        nombres_inverses.append(-i)
+print(nombres_inverses)
