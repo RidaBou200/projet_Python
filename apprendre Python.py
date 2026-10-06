@@ -1,13 +1,13 @@
-"""
+'''
 a= input("Entrer un prmeire nombre : ")
 b=input("Entrer un deuxième nombre : ")
 print(f"Le résultat de l'addition de {a} avec {b} est égal à {int(a)+int(b)}")
-"""
+'''
 '''
 age = 15
 if age >= 18 :
     print("Vous etes majeur !")
-else :
+else : 
     print("vous etes mineur") 
 '''
 '''
@@ -114,6 +114,7 @@ for i in liste:
         nombres_positives.append(i)
 print(nombres_positives)
 '''
+'''
 nombres = range(10)
 nombres_inverses = []
 for i in nombres:
@@ -122,3 +123,62 @@ for i in nombres:
     else:
         nombres_inverses.append(-i)
 print(nombres_inverses)
+'''
+'''
+#Compréhension de liste à partir des boucles :
+nombres = range(10)
+nombres_inverses = [i if i % 2 ==0 else -i for i in nombres ]
+print(nombres_inverses)
+
+mot = "Python"
+reversed(mot)
+for lettre in reversed(mot):
+    print(lettre)
+'''
+
+import sys
+liste = []
+Menu = '''choissez parmi les élements suivantes :
+1: Ajouter un élemennts
+2:supprimer un élements 
+3:afficher la liste 
+4:vider la liste 
+5:Quitter 
+'''
+
+menu_choices = ["1","2","3","4","5"]
+
+while True:
+    user_choices = ""
+    while user_choices not in menu_choices:
+        user_choices = input(Menu)
+        if user_choices not in menu_choices:
+            print("Veillez choisir une option valide ...")
+    
+    if user_choices=="1":
+        item = input("Entrer un élement à rajouter dans la liste :")
+        liste.append(item)
+        print(f"l'élement {item} a bien été ajouter à la liste.")
+
+    elif user_choices=="2":
+        if item in liste:
+            liste.remove(item)
+            print(f"l'élement {item} à été supprimé dans la liste") 
+        else:
+            print(f"l'élement {item} n'est pas dans la liste .")
+
+    elif user_choices=="3":
+        if liste:
+            print("Voici le contenu de la liste :")
+            for i ,item in enumerate (liste , 1 ):
+                print(f"{i},{item}")
+            else:
+                print("votre liste est vide !")
+
+    elif user_choices=="4":
+        liste.clear()
+        print("la liste à été vidée de son contenu :")
+    elif user_choices=="5":
+        print("A bientot!")
+        sys.exit()
+
